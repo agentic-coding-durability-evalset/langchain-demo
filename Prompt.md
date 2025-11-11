@@ -1,3 +1,9 @@
+## Task 1
+
+**Task Type:** Feature Implementation
+
+**Prompt:**
+```
 Please use langchain and DeepSeek to create an agent:
 
 - When the user asks `What is my IP?`, call function calling: `my_ip`
@@ -5,5 +11,5 @@ Please use langchain and DeepSeek to create an agent:
 - When the user asks `What's the weather like today?`, call function calling: `get_weather`
 - The `get_weather` function will call the `https://api.weatherapi.com/v1/current.json` REST API to get current weather information
 - For other questions, use the DeepSeek model to answer
-
+```
 
