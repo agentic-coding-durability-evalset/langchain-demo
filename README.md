@@ -1,89 +1,89 @@
 # LangChain Demo
 
-一个基于 [LangChain](https://www.langchain.com/) 的 Python AI 应用示例项目。展示了如何使用 LangChain 构建 AI 代理和工具调用应用。
+A Python AI application demo project based on [LangChain](https://www.langchain.com/). Demonstrates how to build AI agents and tool-calling applications using LangChain.
 
-## 技术栈
+## Tech Stack
 
 - **Python**: 3.13+
 - **LangChain**: 1.0.2+
-- **LangChain Anthropic**: 1.0.0+ (Claude 支持)
-- **LangChain DeepSeek**: 1.0.0+ (DeepSeek 支持)
-- **LangChain OpenAI**: 1.0.1+ (OpenAI 支持)
-- **Python-dotenv**: 1.1.1+ (环境变量管理)
+- **LangChain Anthropic**: 1.0.0+ (Claude support)
+- **LangChain DeepSeek**: 1.0.0+ (DeepSeek support)
+- **LangChain OpenAI**: 1.0.1+ (OpenAI support)
+- **Python-dotenv**: 1.1.1+ (Environment variable management)
 
-## 项目结构
+## Project Structure
 
 ```
 langchain-demo/
-├── agent-demo.py         # AI 代理示例
-├── deepseek-demo.py      # DeepSeek 模型示例
-├── pyproject.toml        # 项目配置和依赖
+├── agent-demo.py         # AI agent example
+├── deepseek-demo.py      # DeepSeek model example
+├── pyproject.toml        # Project configuration and dependencies
 └── README.md
 ```
 
-## 功能特性
+## Features
 
-- AI 代理创建
-- 工具调用支持
-- 多模型支持（OpenAI, Anthropic, DeepSeek）
-- 环境变量配置
-- 简单的代理示例
+- AI agent creation
+- Tool calling support
+- Multi-model support (OpenAI, Anthropic, DeepSeek)
+- Environment variable configuration
+- Simple agent examples
 
-## 快速开始
+## Quick Start
 
-### 前置要求
+### Prerequisites
 
-- Python 3.13 或更高版本
-- API 密钥（OpenAI、Anthropic 或 DeepSeek）
+- Python 3.13 or higher
+- API keys (OpenAI, Anthropic, or DeepSeek)
 
-### 安装和运行
+### Installation and Running
 
 ```bash
-# 创建虚拟环境（推荐）
+# Create virtual environment (recommended)
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# 安装依赖
+# Install dependencies
 pip install -e ".[dev]"
 
-# 创建 .env 文件
+# Create .env file
 cat > .env << EOF
 OPENAI_API_KEY=your-openai-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 DEEPSEEK_API_KEY=your-deepseek-api-key
 EOF
 
-# 运行代理示例
+# Run agent demo
 python agent-demo.py
 
-# 运行 DeepSeek 示例
+# Run DeepSeek demo
 python deepseek-demo.py
 ```
 
-# 运行代理
+# Run agent
 result = agent.invoke({
     "messages": [{"role": "user", "content": "what is the weather in sf"}]
 })
 ```
 
-### 关键概念
+### Key Concepts
 
-- **代理 (Agent)**: 可以调用工具和做出决策的 AI 系统
-- **工具 (Tools)**: 代理可以调用的函数
-- **模型**: 支持多种 LLM 提供商
-- **提示 (Prompts)**: 系统提示和用户消息
+- **Agent**: An AI system that can call tools and make decisions
+- **Tools**: Functions that agents can invoke
+- **Models**: Support for multiple LLM providers
+- **Prompts**: System prompts and user messages
 
-## 调试
+## Debugging
 
-使用 Python 调试器：
+Use Python debugger:
 
 ```bash
 python -m pdb agent-demo.py
 ```
 
-## 参考资源
+## References
 
-- [LangChain 文档](https://python.langchain.com/)
-- [LangChain 工具文档](https://python.langchain.com/docs/modules/tools/)
-- [LangChain 代理文档](https://python.langchain.com/docs/modules/agents/)
+- [LangChain Documentation](https://python.langchain.com/)
+- [LangChain Tools Documentation](https://python.langchain.com/docs/modules/tools/)
+- [LangChain Agents Documentation](https://python.langchain.com/docs/modules/agents/)
 - [LangChain GitHub](https://github.com/langchain-ai/langchain)
